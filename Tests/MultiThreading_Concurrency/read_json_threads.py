@@ -13,7 +13,7 @@ log_queue = Queue()
 queue_handler = logging.handlers.QueueHandler(log_queue)
 
 #Creating a file handler
-file_handler = logging.FileHandler('Tests/MultiThreading_Concurrency/json_results.log')
+file_handler = logging.FileHandler(f'{os.path.dirname(__file__)}/json_results.log')
 formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 file_handler.setFormatter(formatter)
 
