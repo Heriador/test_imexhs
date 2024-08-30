@@ -1,7 +1,5 @@
 import os
 import csv
-import pandas as pd
-import numpy as np
 import logging
 import pydicom
 from datetime import datetime
@@ -16,7 +14,7 @@ def listFolder(path):
         # listing the files in the path folder using os.listdir
         files = os.listdir(path)
         nfiles = 0
-        for file in files:
+        for _ in files:
             
             nfiles += 1
 
