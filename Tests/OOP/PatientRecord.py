@@ -1,4 +1,5 @@
 import logging
+import os
 from datetime import datetime
 
 class PatientRecord:
@@ -7,7 +8,7 @@ class PatientRecord:
     def __init__(self,name,birth_date,sex,weight,patien_id,type_id) -> None:
         logging.basicConfig(level=logging.DEBUG, 
                             format='%(asctime)s - %(levelname)s - %(message)s',
-                            filename='PatientRecord.log',
+                            filename=f'{os.path.dirname(__file__)}/PatientRecord.log',
                             filemode='a')
         self.__name = name
     
